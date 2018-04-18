@@ -1,6 +1,6 @@
 import sys
 
-db = open('db.txt', 'w')
+db = open('db.txt', 'a')
 
 param1 = sys.argv[1]
 param2 = sys.argv[2]
