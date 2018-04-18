@@ -1,0 +1,4 @@
+1:Cat
+2:Cow
+3:Horse
+52:Dog
