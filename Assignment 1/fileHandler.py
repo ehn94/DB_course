@@ -1,14 +1,15 @@
 import sys
 
-db = open('db.txt', 'a')
+db = 'db.txt'
 
 param1 = sys.argv[1]
 param2 = sys.argv[2]
 
 def write_to_file(key=param1, val=param2):
+    f = open(db,'a')
     pair =  "%s:%s" % (key, val)
-    db.write(enc(pair) + '\n')
-    db.close
+    f.write(enc(pair) + '\n')
+    f.close() 
 
 with open('db.txt', "rb") as binary_file:
     data = binary_file.read()
