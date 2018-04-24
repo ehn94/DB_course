@@ -13,11 +13,10 @@ public class Stopwatch {
 
     private long start;
 
-    public Stopwatch() {
+    public void start(){
         start = System.currentTimeMillis();
     }
-    
-    public double elapseTime(){
+    public double elapsedTime(){
         long current = System.currentTimeMillis();
         return (current - start) /1000.0;
     }

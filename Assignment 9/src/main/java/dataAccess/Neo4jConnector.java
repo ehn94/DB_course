@@ -20,7 +20,10 @@ public class Neo4jConnector {
     private final String username = "neo4j";
     private final String password = "1234";
 
-    public void Neo4JConnector() {
+    public Driver getDriver() {
+        if(driver == null){
         this.driver = GraphDatabase.driver(uri, AuthTokens.basic(username, password));
+        }
+        return driver;
     }
 }

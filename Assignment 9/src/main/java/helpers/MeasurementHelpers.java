@@ -27,7 +27,7 @@ public class MeasurementHelpers {
     
     public Double getMedian(ArrayList<Double> list){
         int middle = list.size()/2;
-        middle = middle % 2 == 0? middle -1 : middle;
+        middle = middle % 2 == 0 ? middle -1 : middle;
         return list.get(middle);
     }
     
@@ -37,13 +37,11 @@ public class MeasurementHelpers {
         try (Session session = driver.session()) {
             StatementResult result = session.run(
                     "MATCH(a:Person) WITH a, rand() AS number RETURN a.name as name ORDER BY number LIMIT 20");
-            
             while( result.hasNext() ) {
                 Record record = result.next();
                 names.add(record.get("name").asString());
             }
         }
-        driver.close();
         return names;
     }
 }
