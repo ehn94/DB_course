@@ -10,11 +10,11 @@ The average and median value is given in seconds.
 
 |   | Neo4  Average  | Neo4  Median | MySQL Average |   MySQL Median |
 |---|---|---|---|---|
-|getAllPersonsDepthOne:	|0.0032	|0.003	|0.02	|0.01	|
-|getAllPersonsDepthTwo:	|0.00445	|0.004	|0.025	|0.01 |
-|getAllPersonsDepthThree:	|0.0098	|0.007	|0.1 |0.05 |
-|getAllPersonsDepthFour:	|0.3345	|0.032	|0.36 |0.05 |
-|getAllPersonsDepthFive:	|0.14605	|0.16	|1.25	|0.06|
+|getDepthOne:	|0.0032	|0.003	|0.02	|0.01	|
+|getDepthTwo:	|0.00445	|0.004	|0.025	|0.01 |
+|getDepthThree:	|0.0098	|0.007	|0.1 |0.05 |
+|getDepthFour:	|0.3345	|0.032	|0.36 |0.05 |
+|getDepthFive:	|0.14605	|0.16	|1.25	|0.06|
 
 ### 4. Give an explanation of the differences in your time measurements
 
