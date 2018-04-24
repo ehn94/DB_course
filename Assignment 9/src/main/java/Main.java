@@ -4,20 +4,9 @@ import dataAccess.MySQLDataAccess;
 import dataAccess.Neo4JDataAccess;
 import dataAccess.Neo4jConnector;
 import helpers.MeasurementHelpers;
-import helpers.Stopwatch;
-import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import static jdk.nashorn.internal.objects.NativeArray.map;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 /**
  *
  * @author ehn19
@@ -32,7 +21,6 @@ public class Main {
         MySQLDataAccess sqlAccess = new MySQLDataAccess();
         
         MeasurementHelpers helper = new MeasurementHelpers();
-        Stopwatch watch = new Stopwatch(); 
 
         HashMap<Integer, ArrayList<Double>> neo4jMap = new HashMap<>();
         HashMap<Integer, ArrayList<Double>> sqlMap = new HashMap<>();
@@ -67,22 +55,22 @@ public class Main {
             }
         });
         
-//        System.out.println("-------------- Neo4J --------------");
-//        System.out.println("Depth 1: ");
-//        System.out.println("Avg: " + helper.getAverage(neo4jMap.get(1)));
-//        System.out.println("Median: " + helper.getMedian(neo4jMap.get(1)));
-//        System.out.println("Depth 2: ");
-//        System.out.println("Avg: " + helper.getAverage(neo4jMap.get(2)));
-//        System.out.println("Median: " + helper.getMedian(neo4jMap.get(2)));
-//        System.out.println("Depth 3: ");
-//        System.out.println("Avg: " + helper.getAverage(neo4jMap.get(3)));
-//        System.out.println("Median: " + helper.getMedian(neo4jMap.get(3)));
-//        System.out.println("Depth 4: ");
-//        System.out.println("Avg: " + helper.getAverage(neo4jMap.get(4)));
-//        System.out.println("Median: " + helper.getMedian(neo4jMap.get(4)));
-//        System.out.println("Depth 5: ");
-//        System.out.println("Avg: " + helper.getAverage(neo4jMap.get(5)));
-//        System.out.println("Median: " + helper.getMedian(neo4jMap.get(5)));
+        System.out.println("-------------- Neo4J --------------");
+        System.out.println("Depth 1: ");
+        System.out.println("Avg: " + helper.getAverage(neo4jMap.get(1)));
+        System.out.println("Median: " + helper.getMedian(neo4jMap.get(1)));
+        System.out.println("Depth 2: ");
+        System.out.println("Avg: " + helper.getAverage(neo4jMap.get(2)));
+        System.out.println("Median: " + helper.getMedian(neo4jMap.get(2)));
+        System.out.println("Depth 3: ");
+        System.out.println("Avg: " + helper.getAverage(neo4jMap.get(3)));
+        System.out.println("Median: " + helper.getMedian(neo4jMap.get(3)));
+        System.out.println("Depth 4: ");
+        System.out.println("Avg: " + helper.getAverage(neo4jMap.get(4)));
+        System.out.println("Median: " + helper.getMedian(neo4jMap.get(4)));
+        System.out.println("Depth 5: ");
+        System.out.println("Avg: " + helper.getAverage(neo4jMap.get(5)));
+        System.out.println("Median: " + helper.getMedian(neo4jMap.get(5)));
 
         System.out.println("-------------- MySQL --------------");
         System.out.println("Depth 1: ");
