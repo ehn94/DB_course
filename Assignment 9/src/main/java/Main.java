@@ -37,19 +37,20 @@ public class Main {
         sqlMap.put(4, new ArrayList<>());
         sqlMap.put(5, new ArrayList<>());
 
-        helper.getRandom(neoCon.getDriver()).forEach((name) -> {
+        helper.getRandom(neoCon.getDriver()).forEach((id) -> {
             try {
-                neoAccess.getDepthOne((String) name, neo4jMap, neoCon.getDriver());
-                neoAccess.getDepthTwo((String) name, neo4jMap, neoCon.getDriver());
-                neoAccess.getDepthThree((String) name, neo4jMap, neoCon.getDriver());
-                neoAccess.getDepthFour((String) name, neo4jMap, neoCon.getDriver());
-                neoAccess.getDepthFive((String) name, neo4jMap, neoCon.getDriver());
-                
-                sqlAccess.getDepthOne((String) name, sqlMap, sqlCon.mySQLConnector());
-                sqlAccess.getDepthTwo((String) name, sqlMap, sqlCon.mySQLConnector());
-                sqlAccess.getDepthThree((String) name, sqlMap, sqlCon.mySQLConnector());    
-                sqlAccess.getDepthFour((String) name, sqlMap, sqlCon.mySQLConnector());
-                sqlAccess.getDepthFive((String) name, sqlMap, sqlCon.mySQLConnector());
+                System.out.println("Name: " + id);
+                neoAccess.getDepthOne((String) id, neo4jMap, neoCon.getDriver());
+                neoAccess.getDepthTwo((String) id, neo4jMap, neoCon.getDriver());
+                neoAccess.getDepthThree((String) id, neo4jMap, neoCon.getDriver());
+                neoAccess.getDepthFour((String) id, neo4jMap, neoCon.getDriver());
+                neoAccess.getDepthFive((String) id, neo4jMap, neoCon.getDriver());
+//                
+//                sqlAccess.getDepthOne((String) name, sqlMap, sqlCon.mySQLConnector());
+//                sqlAccess.getDepthTwo((String) name, sqlMap, sqlCon.mySQLConnector());
+//                sqlAccess.getDepthThree((String) name, sqlMap, sqlCon.mySQLConnector());    
+//                sqlAccess.getDepthFour((String) name, sqlMap, sqlCon.mySQLConnector());
+//                sqlAccess.getDepthFive((String) name, sqlMap, sqlCon.mySQLConnector());
             } catch (Exception ex) {
                 System.out.println(ex);
             }

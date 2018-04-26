@@ -44,7 +44,7 @@ public class Neo4JDataAccess {
         try (Session session = driver.session()) {
 
             result = session.run(
-                    "MATCH (:Person {name:\"" + name + "\"})-[:ENDORSES*..2]->(p:Person)\n"
+                    "MATCH (:Person {name:\"" + name + "\"})-[:ENDORSES*2]->(p:Person)\n"
                     + "RETURN p");
 
         }
@@ -63,7 +63,7 @@ public class Neo4JDataAccess {
         try (Session session = driver.session()) {
 
             result = session.run(
-                    "MATCH (:Person {name:\"" + name + "\"})-[:ENDORSES*..3]->(p:Person)\n"
+                    "MATCH (:Person {name:\"" + name + "\"})-[:ENDORSES*3]->(p:Person)\n"
                     + "RETURN p");
 
         }
@@ -81,7 +81,7 @@ public class Neo4JDataAccess {
         try (Session session = driver.session()) {
 
             result = session.run(
-                    "MATCH (:Person {name:\"" + name + "\"})-[:ENDORSES*..4]->(p:Person)\n"
+                    "MATCH (:Person {name:\"" + name + "\"})-[:ENDORSES*4]->(p:Person)\n"
                     + "RETURN p");
 
         }
@@ -99,7 +99,7 @@ public class Neo4JDataAccess {
         try (Session session = driver.session()) {
 
             result = session.run(
-                    "MATCH (:Person {name:\"" + name + "\"})-[:ENDORSES*..5]->(p:Person)\n"
+                    "MATCH (:Person {name:\"" + name + "\"})-[:ENDORSES*5]->(p:Person)\n"
                     + "RETURN p");
 
         }
